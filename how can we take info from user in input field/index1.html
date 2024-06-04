@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiple Image Upload</title>
+</head>
+<body>
+
+  <form id="imageForm" enctype="multipart/form-data">
+    <label for="imageInput">Select Multiple Images:</label>
+    <input type="file" id="imageInput" name="images[]" multiple>
+    <button type="button" onclick="uploadImages()">Upload Images</button>
+  </form>
+
+  <script>
+    function uploadImages() {
+      var formData = new FormData(document.getElementById('imageForm'));
+
+      // You can now use AJAX or fetch to send the FormData to the server
+      // Example using fetch:
+      fetch('/upload-endpoint', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Images uploaded successfully:', data);
+        // Handle success
+      })
+      .catch(error => {
+        console.error('Error uploading images:', error);
+        // Handle error
+      });
+    }
+  </script>
+
+</body>
+</html>

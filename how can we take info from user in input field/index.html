@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hello.html</title>
+    <script src="index.js"></script>
+    <style>
+      ::selection {
+        background-color: #31ffa8; /* Blue background color */
+        color: #ffffff; /* White text color */
+      }
+    </style>
+  </head>
+  <body>
+    <div style="gap: -35px !important">
+      <input id="age" placeholder="enter your age" type="search" />
+      <button onclick="function1()">click this button to verify</button>
+      <h1 id="demo"></h1>
+    </div>
+    <script>
+      function function1() {
+        let age = document.getElementById("age").value;
+        if (age >= 18 && age < 50) {
+          if (age >= 40) {
+            var b = `You are selected but you will retired after ${
+              50 - age
+            } due to our policies`;
+          } else {
+            var b = `You are selected`;
+          }
+        } else if (age < 18 && age > 1) {
+          if (age >= 15 && age < 17) {
+            var b = `You are not selected because You Are Younger Than 18 <br> but you will try after <b><i>' ${
+              18 - age
+            } years'</i></b>`;
+          } else if (age == 17) {
+            var b = `You are not selected because You Are Younger Than 18 <br> but you will try after <b><i>' ${
+              18 - age
+            } year'</i></b>`;
+          } else {
+            var b = `You Are Not Selected Because You Are Younger Than 18`;
+          }
+        } else if (age >= 50 && age <= 100) {
+          if (age == 50) {
+            var b = `You are not selected because your age is equal to 50`;
+          } else {
+            var b = `You are not selected because your age is ${
+              age - 50
+            } years greater than 50`;
+          }
+        } else if (age === "") {
+          var b = "please enter your age";
+        } else {
+          var b = "Please enter your real age";
+        }
+
+        document.getElementById("demo").innerHTML = b;
+      }
+    </script>
+  </body>
+</html>

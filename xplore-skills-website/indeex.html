@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Flowchart with JavaScript</title>
+    <style>
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <svg
+      id="flowchart"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 400 200"
+    ></svg>
+
+    <script>
+      function createRect(x, y, width, height, rx, ry, fill) {
+        const rect = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "rect"
+        );
+        rect.setAttribute("x", x);
+        rect.setAttribute("y", y);
+        rect.setAttribute("width", width);
+        rect.setAttribute("height", height);
+        rect.setAttribute("rx", rx);
+        rect.setAttribute("ry", ry);
+        rect.setAttribute("fill", fill);
+        return rect;
+      }
+
+      function createText(x, y, text) {
+        const textElement = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text"
+        );
+        textElement.setAttribute("x", x);
+        textElement.setAttribute("y", y);
+        textElement.textContent = text;
+        textElement.setAttribute("text-anchor", "middle");
+        textElement.setAttribute("fill", "white");
+        return textElement;
+      }
+
+      function createLine(x1, y1, x2, y2) {
+        const line = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "line"
+        );
+        line.setAttribute("x1", x1);
+        line.setAttribute("y1", y1);
+        line.setAttribute("x2", x2);
+        line.setAttribute("y2", y2);
+        line.setAttribute("stroke", "black");
+        line.setAttribute("marker-end", "url(#arrowhead)");
+        return line;
+      }
+
+      // Create SVG container
+      const svg = document.getElementById("flowchart");
+
+      // Add nodes and arrows
+      svg.appendChild(createRect(50, 30, 80, 40, 10, 10, "#8CC84B")); // Start
+      svg.appendChild(createRect(180, 30, 80, 40, 10, 10, "#8CC84B")); // Process 1
+      svg.appendChild(createRect(310, 30, 80, 40, 10, 10, "#8CC84B")); // Process 2
+      svg.appendChild(createRect(180, 100, 80, 40, 10, 10, "#F28E2B")); // Decision 1
+
+      // Add text labels
+      svg.appendChild(createText(90, 55, "Start"));
+      svg.appendChild(createText(220, 55, "Process 1"));
+      svg.appendChild(createText(350, 55, "Process 2"));
+      svg.appendChild(createText(220, 125, "Decision 1"));
+
+      // Add arrows
+      svg.appendChild(createLine(130, 50, 180, 50)); // Arrow from Start to Process 1
+      svg.appendChild(createLine(260, 50, 310, 50)); // Arrow from Process 1 to Process 2
+      svg.appendChild(createLine(220, 70, 220, 100)); // Arrow from Process 1 to Decision 1
+      svg.appendChild(createLine(180, 120, 100, 120)); // Arrow from Decision 1 to Start
+    </script>
+  </body>
+</html>

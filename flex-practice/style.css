@@ -1,0 +1,13 @@
+.fcontainer {
+  border: 2px solid gray;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.fitem {
+  background-color: red;
+  border: 2px solid black;
+  margin: 12px;
+  width: 122px;
+  height: 122px;
+  align-items: flex-start;
+}

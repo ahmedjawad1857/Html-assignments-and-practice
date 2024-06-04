@@ -1,0 +1,5 @@
+@media (max-width: 800px) {
+  .form {
+    flex-wrap: wrap;
+  }
+}

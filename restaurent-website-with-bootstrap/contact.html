@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Navbar Example</title>
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      body {
+        font-family: poppins;
+      }
+      .navbar .nav-link {
+        margin-right: 20px;
+      }
+      li {
+        text-decoration: underline;
+        text-decoration-color: rgb(255, 145, 0);
+      }
+      button p {
+        text-decoration: underline;
+        align-items: center;
+      }
+      a img {
+        text-decoration: underline;
+      }
+      button {
+        border-radius: 100%;
+        height: 40px;
+      }
+      body p {
+        font-size: small;
+      }
+      .width {
+        display: flex;
+        gap: 500px;
+      }
+      #home {
+        gap: 10px;
+      }
+      .bg-img {
+        background-image: url(./menu/5.jpg);
+        background-size: cover;
+      }
+      #icon {
+        color: white;
+      }
+      #form {
+        gap: 50px;
+      }
+      .para {
+        text-decoration: underline;
+        display: flex;
+      }
+      .email {
+        gap: -230px;
+      }
+      @media (max-width: 500px) {
+        .form {
+          width: 400px;
+        }
+      }
+      @media (max-width: 400px) {
+        .form {
+          width: 300px;
+        }
+      }
+      @media (max-width: 340px) {
+        .form {
+          width: 270px;
+        }
+      }
+
+      #charitable {
+        justify-content: center;
+      }
+      @media (max-width: 1000px) {
+        .logo {
+          justify-items: center;
+        }
+        #charitable {
+          gap: 50px;
+        }
+        .form { 
+          width: 300px;
+        }
+      }
+      @media (max-width: 800px) {
+        #form {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="bg-img">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="./logo/logo.png" alt="Logo" />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav ">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="./home.html"
+                  ><b>Home</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="./about.html"
+                  ><b>About us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="./menu.html"
+                  ><b>our menu</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="./blog.html"
+                  ><b>blog</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="./contact.html"
+                  ><b>Contact us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-cart3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                  <i class="bi bi-cart3"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><button class="btn btn-light rounded-pill">
+                    <b style="text-decoration: underline">Booking now</b>
+                  </button></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div>
+          <br /><br /><br />
+          <h3 class="text-light text-center fs-1 text-uppercase">Contact us</h3>
+        </div>
+        <div class="d-flex justify-content-center" id="home">
+          <br />
+          <h6 class="text-light text-uppercase">home</h6>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="25"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+            id="icon"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+          <span> <i class="bi bi-arrow-right" id="icon"></i></span>
+          <h6 class="text-white text-uppercase">Contact us</h6>
+        </div>
+        <br />
+        <br /><br /><br />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      </div>
+      <div>
+        <h1 class="text-center"><b>Get In Touch</b></h1>
+        <p class="text-center">
+          Lorem Ipsum dolor sit amet,consectetur adipisicing elit.Asperios
+          officiis explicabo blandittis consequuntur fugit fugiat, incidunt
+          totam <br />consectetur veritatis minus corporis
+        </p>
+        <div class="d-flex" id="form">
+          <form class="form">
+            <input
+              type="text"
+              class="col-12"
+              style="background-color: #f8f9fa"
+              placeholder="Enter Your Name"
+            />
+            <br /><br />
+            <input
+              type="text"
+              class="col-12"
+              style="background-color: #f8f9fa"
+              placeholder="Enter Your Email"
+            />
+            <br /><br />
+            <input
+              type="text"
+              class="col-12"
+              style="background-color: #f8f9fa"
+              placeholder="Enter Your PhoneNumber"
+            />
+            <br /><br />
+            <textarea
+              name=""
+              class="form"
+              cols="66"
+              rows="10"
+              style="background-color: #f8f9fa"
+              placeholder="Enter Your Message"
+            ></textarea>
+            <div>
+              <button
+                class="btn col-12 mt-5"
+                style="background-color: rgb(255, 145, 0)"
+              >
+                <a href="#" class="text-light">Send Message</a>
+              </button>
+            </div>
+          </form>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5972680100144!2d73.04053857922555!3d31.425220273782156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39224315564dab41%3A0xb4711a4aba430b24!2sSazeen%20Sweet%20%26%20Bakers%20Bazzar%232!5e0!3m2!1sen!2s!4v1686942540255!5m2!1sen!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <br />
+        <br /><br />
+        <div style="background-color: #f8f9fa">
+        <br />
+        <br /><br />
+        <div class="flex-wrap d-flex" style="gap: 150px" id="charitable">
+          <div>
+            <h3>Smart Charitables</h3>
+            <p>
+              Lorem ipsum, dolor sit amet <br />
+              consectetur adipisicing elit. <br />
+              Maxime adipisci veniam <br />
+              voluptatum voluptatem sed <br />
+              ex error beatae, asperiores <br />
+              dignissimos?
+            </p>
+            <!-- <img src="./facebook icon.PNG" alt=""><img src="./twitter.PNG" alt=""><img src="./b icon.PNG" alt=""><img src="./one more icon.PNG" alt=""> -->
+            <img src="./shapes/all logo.PNG" alt="" />
+          </div>
+          <div>
+            <h3>Quick Link</h3>
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Home</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">About Us</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Services</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Blog</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Contact Us</span>
+          </div>
+          <div>
+            <h3>Services</h3>
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline"> Home </span> <br />
+
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">About Us</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Services</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Blog</span>
+            <br />
+            <img src="./right angle bracket.PNG" alt="" />
+            <span style="text-decoration: underline">Contact Us</span>
+          </div>
+          <div>
+            <h3>News Letter</h3>
+            <p>
+              Lorem Ipsum dolor sit amet, <br />
+              consectetur adipisicing elit.
+            </p>
+            <div class="email">
+              <input type="text" placeholder="Email" style="width: 130px" />
+              <img src="./paperplane icon.PNG" alt="" />
+            </div>
+          </div>
+        </div>
+        <br />
+        <hr />
+        <br />
+
+        <div style="text-align: center">
+          <p>
+            2023 @ All Rights Reserved And Design By
+            <b style="color: rgb(255, 145, 0)"> M.Ahmad</b>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

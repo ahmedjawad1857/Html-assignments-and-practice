@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      .star {
+        position: relative;
+        display: inline-block;
+        margin-right: 0.9em;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0.7em solid rgb(255, 145, 0);
+        border-left: 0.3em solid transparent;
+        font-size: 10px;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0.6em;
+          left: -1em;
+          border-right: 1em solid transparent;
+          border-bottom: 0.7em solid rgb(255, 145, 0);
+          border-left: 1em solid transparent;
+          transform: rotate(-35deg);
+        }
+        &:after {
+          transform: rotate(35deg);
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      body {
+        font-family: poppins;
+      }
+      .navbar .nav-link {
+        margin-right: 20px;
+      }
+      li {
+        text-decoration: underline;
+        text-decoration-color: rgb(255, 145, 0);
+      }
+      button p {
+        text-decoration: underline;
+        align-items: center;
+      }
+      a img {
+        text-decoration: underline;
+      }
+      button {
+        border-radius: 100%;
+        height: 40px;
+      }
+      body p {
+        font-size: small;
+      }
+      .width {
+        display: flex;
+        gap: 500px;
+      }
+      #home {
+        gap: 10px;
+      }
+      .bg-img {
+        background-image: url(./menu/5.jpg);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-img">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+            <img src="./logo/logo.png" alt="Logo" />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav ">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: rgb(255, 145, 0)"
+                  href="./home.html"
+                  ><b>Home</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: rgb(255, 145, 0)"
+                  href="./about.html"
+                  ><b>About us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: rgb(255, 145, 0)"
+                  href="./menu.html"
+                  ><b>our menu</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: rgb(255, 145, 0)"
+                  href="./blog.html"
+                  ><b>blog</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  style="color: rgb(255, 145, 0)"
+                  href="./contact.html"
+                  ><b>Contact us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 145, 0)" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-cart3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                  <i class="bi bi-cart3"></i
+                ></a>
+              </li>
+    </ul>
+                <a class="nav-link" href="#"
+                  ><button class="btn btn-light rounded-pill">
+                    <b style="text-decoration: underline">Booking now</b>
+                  </button></a
+                >
+        
+          </div>
+        </nav>
+        <div>
+          <br /><br /><br />
+          <h1
+            class="text-light text-center text-uppercase"
+            style="font-size: xx-large"
+          >
+            EXPLORE OUR MENU and team
+          </h1>
+        </div>
+        <br /><br /><br /><br />
+      </div>
+      <div class="text-center">
+        <p style="color: rgb(255, 145, 0)" id="menu">Menu</p>
+        <h3><b>Explore Our Best Menu </b></h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+          officiis explicabo blanditiis consequuntur fugit fugiat, incidunt
+          totam <br />
+          consectetur veritatis minus corporis doloribus, qui maxime velit
+          nesciunt, officia praesentium odit facilis.
+        </p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/1.jpg"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 85px">
+            <p><b>Spicy Crab Ramen</b></p>
+            <p style="color: rgb(255, 145, 0)">10$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -15px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+          <br /><br />
+        </div>
+
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/2.jpg"
+            class="rounded-start"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 45px">
+            <p><b>Italian Source Mushroom</b></p>
+            <p style="color: rgb(255, 145, 0)">12$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+              <span class="star"></span>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -15px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+          <br /><br />
+        </div>
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/3.jpg"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 45px">
+            <p><b>Fried Potatoes With Garlic</b></p>
+            <p style="color: rgb(255, 145, 0)">15$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -25px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around">
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/4.jpg"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 75px">
+            <p><b>Fried Chicken Salad</b></p>
+            <p style="color: rgb(255, 145, 0)">15$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -40px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/5.jpg"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 45px">
+            <p><b>Fresh Crab With Lemon</b></p>
+            <p style="color: rgb(255, 145, 0)">15$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -40px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            style="height: 160px; width: 250px; border-radius: 0% 10%"
+            src="./menu/6.jpg"
+            alt="..."
+          />
+
+          <div class="d-flex mt-3" style="gap: 60px">
+            <p><b>Grilled Salmon Sushi</b></p>
+            <p style="color: rgb(255, 145, 0)">15$</p>
+          </div>
+          <p style="margin-top: -10px">
+            Crab / Veggie / Soup <br />
+            Lorem ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Repellendus unde fuga saepe <br />
+            accusantium hic iusto qui
+          </p>
+          <div>
+            <div style="display: flex; gap: 18px">
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+              <p class="star"></p>
+            </div>
+            <div
+              style="
+                box-sizing: border-box;
+                background-color: rgb(255, 145, 0);
+                height: 50px;
+                width: 50px;
+                margin-left: 200px;
+                margin-top: -40px;
+                border-top-left-radius: 40%;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50"
+                height="50"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+                style="color: white"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br /><br />
+      <div class="text-center">
+        <p style="color: rgb(255, 145, 0); margin-top: -69px">Team</p>
+        <h3><b>Explore Our Team</b></h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+          officiis explicabo blanditiis consequuntur fugit fugiat, incidunt
+          totam <br />
+          consectetur veritatis minus corporis doloribus, qui maxime velit
+          nesciunt, officia praesentium odit facilis.
+        </p>
+      </div>
+      <br />
+      <div class="d-flex justify-content-around text-center mt-5">
+        <div>
+          <img style="height: 300px; width: 250px" src="./team/1.jpg" alt="" />
+          <div
+            style="
+              background-image: url(shapes/shap-06.png);
+              margin-left: -30px;
+              margin-top: -70px;
+              background-repeat: no-repeat;
+            "
+          >
+            <p
+              class="text"
+              style="margin-left: 100px; margin-top: 70px; font-size: larger"
+            >
+              <b>Mark Anthony</b>
+            </p>
+            <h5 style="margin-top: -20px; opacity: 0.7; margin-left: 100px">
+              <b>Founder & CEO</b>
+            </h5>
+            <br /><br /><br />
+            <br /><br /><br />
+          </div>
+        </div>
+        <div>
+          <img style="height: 300px; width: 250px" src="./team/2.jpg" alt="" />
+          <p style="font-size: larger"><b>Anderson John</b></p>
+          <p style="margin-top: -20px; opacity: 0.7">
+            <b>Chinese Kitchen Lead</b>
+          </p>
+        </div>
+        <div>
+          <img style="height: 300px; width: 250px" src="./team/3.jpg" alt="" />
+          <p style="font-size: larger"><b>John Bennet</b></p>
+          <p style="margin-top: -20px; opacity: 0.7">
+            <b>French Kitchen Lead</b>
+          </p>
+        </div>
+        <div>
+          <img style="height: 300px; width: 250px" src="./team/4.jpg" alt="" />
+          <p style="font-size: larger"><b>Jessica Lee</b></p>
+          <p style="margin-top: -20px; opacity: 0.7"><b>Sauce Chef</b></p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

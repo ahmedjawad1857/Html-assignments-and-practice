@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      .star {
+        position: relative;
+        display: inline-block;
+        margin-right: 0.9em;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0.7em solid rgb(255, 145, 0);
+        border-left: 0.3em solid transparent;
+        font-size: 10px;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0.6em;
+          left: -1em;
+          border-right: 1em solid transparent;
+          border-bottom: 0.7em solid rgb(255, 145, 0);
+          border-left: 1em solid transparent;
+          transform: rotate(-35deg);
+        }
+        &:after {
+          transform: rotate(35deg);
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      body {
+        font-family: " poppins";
+      }
+      .navbar .nav-link {
+        margin-right: 20px;
+      }
+      li {
+        text-decoration: underline;
+      }
+      button p {
+        text-decoration: underline;
+        align-items: center;
+      }
+      a img {
+        text-decoration: underline;
+      }
+      button {
+        height: 40px;
+      }
+      
+      @media (max-width: 600px) {
+        .form {
+          width: 400px;
+        }
+        .leaf{
+          visibility: hidden;
+        }
+        #leaf{
+        margin-top: -250px;
+          
+        }
+      }
+      @media (max-width: 400px) {
+        .form {
+          width: 300px;
+        }
+      }
+      @media (max-width: 340px) {
+        .form {
+          width: 270px;
+        }
+      }
+
+      #charitable {
+        justify-content: center;
+      }
+      @media (max-width: 1000px) {
+        .logo {
+          justify-items: center;
+        }
+        .blog{
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        body{
+          align-items: center;
+        }
+        .charitable {
+          display: flex; 
+          gap: 50px;
+          justify-content: center;
+
+        }
+        .form {
+          width: 300px;
+        }
+       
+      }
+      @media (max-width: 800px) {
+        #form {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        
+        .burger{
+          display: none;
+        }
+      }
+      #form {
+        gap: 50px;
+      }
+      @media(max-width:1000px){
+  .remove{  display: none;
+    }
+      }
+      @media(max-width:2500px){
+        #card{
+          width: 19rem;
+        }
+        .about{
+          gap:300px;
+        }
+        #menu{
+          gap: 75px;
+          text-align: center;
+        }
+        .team{
+          text-align: center;
+        }
+        #blog{
+          text-align: center;
+        }
+        .about-text{
+          text-align: center;
+        }
+      }
+      @media(max-width:760px) {
+        .logo{
+          visibility: hidden;
+        }
+        #fresh{
+         margin-top: -100px;
+        }
+        #menu{
+        
+          gap: 50px;
+        }
+      }
+      @media(max-width:500px){
+        #card{
+            width: 16rem;
+        }
+      }
+      @media(max-width:1200px){
+        .about{
+          display: flex;
+          gap: 100px;
+        }
+      }
+      @media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }}
+  @media(max-width:365px){
+    #menu{
+    text-align: start;
+    }
+    .team{
+      text-align:start ;
+    }
+    #blog{
+      text-align: start;
+    }
+    .about-text{
+    text-align: start;
+    }
+    
+  }
+  @media(max-width:450px)
+{
+  #food{
+   font-size: xx-large;
+   font-weight: bold;
+  }
+  .lorem{
+    line-height:15px ;
+  }
+}
+@media(max-width:365px){
+  #food{
+      font-size: x-large;
+      font-weight: bold;
+     
+    }
+    .lorem{
+      line-height: 12px;
+    }
+}
+
+    
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div
+        class="bg-img"
+        style="
+          background-image: url(./shapes/shape.png);
+          background-position: right;
+          background-repeat: no-repeat;
+        
+        "
+      >
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">
+            <img class="logo" src="./logo/logo.png" alt="Logo" />
+          </a>
+          <div class="collapse navbar-collapse" id="navbarNav ">
+            <ul class="navbar-nav ml-auto text-dark">
+              <li class="nav-item text-dark">
+                <a class="nav-link text-dark" href="#home"
+                  ><b id="home">Home</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#about"
+                  ><b>About us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#menu"
+                  ><b>our menu</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#blog"><b>blog</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="./contact.html"
+                  ><b>Contact us</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-cart3"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                    />
+                  </svg>
+                  <i class="bi bi-cart3"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"
+                  ><button class="btn btn-light rounded-pill">
+                    <b style="text-decoration: underline">Booking now</b>
+                  </button></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="d-flex justify-content-between" id="fresh">
+          <div>
+            <h1 class="fs-1" id="food">
+              <b
+                >YOUR FAVOURITE <br />
+                FOOD DILIVERED <br />
+                & FRESH.</b
+              >
+            </h1>
+            <p class="lorem">
+              Lorem Ipsum Dolor Sit, Amet Consectetur <br />
+              Adpisicing Elit.Consequutur, Natus Magnam <br />
+              Incidunt Iste, Architecto Voluptate Amet Veniam <br />
+              Odio Rieceindis Modi.
+            </p>
+            <div>
+              <button
+                class="btn rounded-pill"
+                style="background-color: rgb(255, 145, 0)"
+              >
+                <p class="text-light">
+                  Order Now
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-arrow-right"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                    />
+                  </svg>
+                  <i class="bi bi-arrow-right"></i>
+                </p>
+              </button>
+            </div>
+
+            <img
+              src="./shapes/01.png"
+              alt=""
+              style="width: 150px; margin-left: -30px; display: block"
+            />
+          </div>
+          <div>
+            <img
+              src="./slider/slide-03.png"
+              alt=""
+              style="height: 300px; width: 400px"
+              class="burger"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- <br /><br /><br /> -->
+      <div class="d-flex flex-wrap justify-content-around" style="margin-top: 70px;">
+        <div>
+          <img class="pl-5" src="./clock icon.PNG" alt="" /> <br />
+          <b>Today 10:00 am-7:00pm</b>
+          <p class="pl-4">Working Hours</p>
+        </div>
+        <div>
+          <img class="pl-3" src="./gps icon.PNG" alt="" /> <br />
+          <b>Faisalabad Pakistan</b>
+          <p class="pl-3">Get Directions</p>
+        </div>
+        <div>
+          <img src="./phone icon.PNG" alt="" /><br />
+          <b>419-704-4407</b>
+          <p class="pl-2">Call Online</p>
+        </div>
+      </div>
+    
+      <div class="d-flex justify-content-end">
+      <img class="remove" src="./shapes/shap-03.png" alt="" />
+    </div>
+    <div  style=" display: flex;" class="about" >
+      <div class="remove"
+        style="
+          background-image: url(./shapes/shap-01.png);
+          background-repeat: no-repeat;
+        "
+      >
+        <img src="./about.png" alt="" />
+      </div>
+      <div>
+        <p style="color: rgb(255, 145, 0)" id="about">About</p>
+        <h2>
+          <b>
+            Food Is Important Part Of A<br />
+            Balanced Diet.</b
+          >
+        </h2>
+        <!-- <br /> -->
+
+        <p style="margin-top: 25px;">
+          Lorem Ipsum dolor sit amet consectetur adpisicing elit. Provident
+          <br />
+          expedita et laudantium excepturi .Quia abcaecati alias a sunt,
+          <br />
+          magnam sint voluptate sequi
+        </p>
+        <!-- <br /><br /><br /> -->
+        <p style="margin-top: 75px;">
+          Lorem Ipsum dolor sit amet consectetur adpisicing elit. Provident
+          <br />
+          expedita et laudantium excepturi .Quia abcaecati alias a sunt,
+          <br />
+          magnam sint voluptate sequi
+        </p>
+        <div class="d-flex" style="gap: 50px; align-items: center">
+          <button
+            class="btn rounded-pill"
+            style="background-color: rgb(255, 145, 0); height: 40px"
+          >
+            <p
+              style="
+                text-decoration: underline;
+                text-decoration-color: white;
+                color: white;
+              "
+            >
+              learn more
+            </p>
+          </button>
+          <div class="d-flex" style="gap: 5px">
+            <img src="./play1.PNG" alt="" height="25px" width="25px" />
+            <p class="text-secondary" style="text-decoration: underline">
+              play now
+            </p>
+          </div>
+        </div>
+        <!-- <br /><br /><br /><br /> -->
+        <img
+          class="remove"
+          src="./shapes/shap-02.png"
+          alt=""
+          style="rotate: -30deg; height: 220px;margin-left: 50px;margin-top: 100px;"
+        />
+      </div>
+    </div> 
+  <div>
+      <div class="remove">
+        <img src="./shapes/shap-04.png" alt="" />
+       
+
+      </div>
+      <div class="about-text" style="margin-top: -70px">
+        <p  style="color: rgb(255, 145, 0); margin-top: 100px; font-size: large">
+          work
+        </p>
+        <h2><b>How It Works</b></h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+          officiis explicabo blanditiis consequuntur fugit fugiat, incidunt
+          totam <br />consectetur veritatis minus corporis doloribus, qui maxime
+          velit nesciunt, officia praesentium odit facilis.
+        </p>
+      </div>
+    </div> 
+    <!-- <br /><br /><br /><br /> -->
+    <div class="d-flex justify-content-around flex-wrap " id="pick" style="margin-top: 100px;">
+      <div class="text-center" id="pick">
+        <img src="./pie.PNG" alt="" />
+        <p><b>Pick meals</b></p>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipisicing elit. <br />
+          Asperiores officiis explicabo <br />
+          blanditiis consequuntur fugit.
+        </p>
+      </div>
+      <div class="text-center" id="pick">
+        <img src="./hand.png" alt="" />
+        <p><b>Choose how often</b></p>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipisicing elit. <br />
+          Asperiores officiis explicabo <br />
+          blanditiis consequuntur fugit.
+        </p>
+      </div>
+      <div id="background-right" class="text-center">
+        <img src="./truck.PNG" alt="" />
+        <p><b>Fast deliveries</b></p>
+        <p>
+          Lorem ipsum dolor sit amet, <br />
+          consectetur adipisicing elit. <br />
+          Asperiores officiis explicabo <br />
+          blanditiis consequuntur fugit.
+        </p>
+      </div>
+    </div>
+    <div  style="margin-top: 100px;" id="menu">
+      <p style="color: rgb(255, 145, 0)" >Menu</p>
+      <h3><b>Explore Our Best Menu </b></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+        officiis explicabo blanditiis consequuntur fugit fugiat, incidunt totam
+        <br />
+        consectetur veritatis minus corporis doloribus, qui maxime velit
+        nesciunt, officia praesentium odit facilis.
+      </p>
+    </div>
+    <div class="d-flex justify-content-around flex-wrap"  id="menu">
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/1.jpg"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 85px">
+          <p><b>Spicy Crab Ramen</b></p>
+          <p style="color: rgb(255, 145, 0)">10$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -15px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white;margin-bottom:50px ; "
+
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+        <!-- <br /><br /> -->
+      </div>
+
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/2.jpg"
+          class="rounded-start"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 45px">
+          <p><b>Italian Source Mushroom</b></p>
+          <p style="color: rgb(255, 145, 0)">12$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+            <span class="star"></span>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -15px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white;margin-bottom: 50px;"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+        <!-- <br /><br /> -->
+      </div>
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/3.jpg"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 45px">
+          <p><b>Fried Potatoes With Garlic</b></p>
+          <p style="color: rgb(255, 145, 0)">15$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -25px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+      </div>
+    <!-- </div>
+    <div class="d-flex justify-content-around flex-wrap" style="gap: 75px"> -->
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/4.jpg"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 75px">
+          <p><b>Fried Chicken Salad</b></p>
+          <p style="color: rgb(255, 145, 0)">15$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -40px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/5.jpg"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 45px">
+          <p><b>Fresh Crab With Lemon</b></p>
+          <p style="color: rgb(255, 145, 0)">15$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -40px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img
+          style="height: 160px; width: 250px; border-radius: 0% 10%"
+          src="./menu/6.jpg"
+          alt="..."
+        />
+
+        <div class="d-flex mt-3" style="gap: 60px">
+          <p><b>Grilled Salmon Sushi</b></p>
+          <p style="color: rgb(255, 145, 0)">15$</p>
+        </div>
+        <p style="margin-top: -10px">
+          Crab / Veggie / Soup <br />
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit. <br />
+          Repellendus unde fuga saepe <br />
+          accusantium hic iusto qui
+        </p>
+        <div>
+          <div style="display: flex; gap: 18px">
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+            <p class="star"></p>
+          </div>
+          <div
+            style="
+              box-sizing: border-box;
+              background-color: rgb(255, 145, 0);
+              height: 50px;
+              width: 50px;
+              margin-left: 200px;
+              margin-top: -40px;
+              border-top-left-radius: 40%;
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              fill="currentColor"
+              class="bi bi-plus"
+              viewBox="0 0 16 16"
+              style="color: white"
+            >
+              <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+              />
+            </svg>
+            <i class="bi bi-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end" style="margin-top: 150px">
+      <img class="leaf" src="./shapes/shap-03.png" alt="" />
+    </div>
+    <div class="team" id="leaf" >
+      <p style="color: rgb(255, 145, 0); margin-top: -69px" >Team</p>
+      <h3><b>Explore Our Team</b></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+        officiis explicabo blanditiis consequuntur fugit fugiat, incidunt totam
+        <br />
+        consectetur veritatis minus corporis doloribus, qui maxime velit
+        nesciunt, officia praesentium odit facilis.
+      </p>
+    </div>
+    <!-- <br /> -->
+    <div
+      class="d-flex justify-content-around text-center mt-5 flex-wrap " style="margin-top: 25px;"
+    >
+      <div>
+        <img style="height: 300px; width: 250px" src="./team/1.jpg" alt="" />
+        <div
+          style="
+            background-image: url(shapes/shap-06.png);
+            margin-left: -30px;
+            margin-top: -70px;
+            background-repeat: no-repeat;
+          
+          "
+        >
+          <p
+            class="text"
+            style="margin-left: 100px; margin-top: 70px; font-size: larger"
+          >
+            <b>Mark Anthony</b>
+          </p>
+          <h5 style="margin-top: -20px; opacity: 0.7; margin-left: 100px;">
+            <b>Founder & CEO</b>
+          </h5>
+          <br /><br /><br />
+          <br /><br /><br />
+        </div>
+      </div>
+      <div >
+        <img style="height: 300px; width: 250px" src="./team/2.jpg" alt="" />
+        <p style="font-size: larger"><b>Anderson John</b></p>
+        <p style="margin-top: -20px; opacity: 0.7">
+          <b>Chinese Kitchen Lead</b>
+        </p>
+      </div>
+      <div>
+        <img style="height: 300px; width: 250px" src="./team/3.jpg" alt="" />
+        <p style="font-size: larger"><b>John Bennet</b></p>
+        <p style="margin-top: -20px; opacity: 0.7">
+          <b>French Kitchen Lead</b>
+        </p>
+      </div>
+      <div>
+        <img style="height: 300px; width: 250px" src="./team/4.jpg" alt="" />
+        <p style="font-size: larger"><b>Jessica Lee</b></p>
+        <p style="margin-top: -20px; opacity: 0.7"><b>Sauce Chef</b></p>
+      </div>
+    </div>
+    <div id="blog">
+      <p style="color: rgb(255, 145, 0)">Blog</p>
+      <h3><b>Explore Our News</b></h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
+        officiis explicabo blanditiis consequuntur fugit fugiat, incidunt totam
+        consectetur veritatis minus corporis doloribus, qui maxime velit
+        nesciunt, officia praesentium odit facilis.
+      </p>
+    </div>
+
+    <div class="blog" style="gap: 50px;display: flex;"  >
+      <div class="card" id="card">
+        <img  src="./blog/1.jpg" class="card-img-top" alt="..." />
+        <div  class="card-body">
+          <h5 class="card-title">
+            Possession so <br />
+            comparison inquietude <br />
+            he conviction
+          </h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Neque at numquam, asperiores <br />
+            aut praesentium facilis ratione! <br />
+            Voluptatibus neque dignissimos <br />
+            ipsa atque veniam sint omnis in <br />
+            blanditiis, nemo fugit animi <br />
+            assumenda.
+          </p>
+          <p  class="card-text" style="color: rgb(255, 145, 0)">
+            By Admin June 17 2023
+          </p>
+        </div>
+      </div>
+      <div class="card" id="card">
+        <img src="./blog/2.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">
+            Possession so <br />
+            comparison inquietude <br />
+            he conviction
+          </h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Neque at numquam, asperiores <br />
+            aut praesentium facilis ratione! <br />
+            Voluptatibus neque dignissimos <br />
+            ipsa atque veniam sint omnis in <br />
+            blanditiis, nemo fugit animi <br />
+            assumenda.
+          </p>
+          <p class="card-text" style="color: rgb(255, 145, 0)">
+            By Admin June 17 2023
+          </p>
+        </div>
+      </div>
+      <div class="card rem" id="card" >
+        <img  src="./blog/3.jpg"  alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">
+            Possession so <br />
+            comparison inquietude <br />
+            he conviction
+          </h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Neque at numquam, asperiores <br />
+            aut praesentium facilis ratione! <br />
+            Voluptatibus neque dignissimos <br />
+            ipsa atque veniam sint omnis in <br />
+            blanditiis, nemo fugit animi <br />
+            assumenda.
+          </p>
+          <p class="card-text" style="color: rgb(255, 145, 0)">
+            By Admin June 17 2023
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h1 class="text-center" id="contact"><b>Get In Touch</b></h1>
+      <p class="text-center">
+        Lorem Ipsum dolor sit amet,consectetur adipisicing elit.Asperios
+        officiis explicabo blandittis consequuntur fugit fugiat, incidunt totam
+        <br />consectetur veritatis minus corporis
+      </p>
+      <div class="d-flex" id="form">
+        <form class="form">
+          <input
+            type="text"
+            class="col-12"
+            style="background-color: rgba(128, 128, 128, 0.3)"
+            placeholder="Enter Your Name"
+          />
+          <!-- <br /><br /> -->
+          <input
+            type="text"
+            class="col-12"
+            style="background-color: rgba(128, 128, 128, 0.3);margin-top: 25px;"
+            placeholder="Enter Your Email"
+          />
+          <!-- <br /><br /> -->
+          <input
+            type="text"
+            class="col-12"
+            style="background-color: rgba(128, 128, 128, 0.3);margin-top: 25px;"
+            placeholder="Enter Your PhoneNumber"
+          />
+          <br /><br />
+          <textarea
+            name=""
+            class="form"
+            cols="66"
+            rows="10"
+            style="background-color: rgba(128, 128, 128, 0.4);"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <div>
+            <button
+              class="btn col-12 mt-5"
+              style="background-color: rgb(255, 145, 0)"
+            >
+              <a href="#" class="text-light">Send Message</a>
+            </button>
+          </div>
+        </form>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.5972680100144!2d73.04053857922555!3d31.425220273782156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39224315564dab41%3A0xb4711a4aba430b24!2sSazeen%20Sweet%20%26%20Bakers%20Bazzar%232!5e0!3m2!1sen!2s!4v1686942540255!5m2!1sen!2s"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+<!-- 
+      <br />
+      <br /><b>
+        <br />
+      </b> -->
+      <div class="charitable" style="flex-wrap:wrap; display:flex;justify-content:space-around;margin-top: 180px;">
+        <div>
+          <h3>Smart Charitables</h3>
+          <p>
+            Lorem ipsum, dolor sit amet <br />
+            consectetur adipisicing elit. <br />
+            Maxime adipisci veniam <br />
+            voluptatum voluptatem sed <br />
+            ex error beatae, asperiores <br />
+            dignissimos?
+          </p>
+
+          <img src="./shapes/all logo.PNG" alt="" />
+        </div>
+        <div>
+          <h3>Quick Link</h3>
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Home</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">About Us</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Services</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Blog</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Contact Us</span>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline"> Home </span> <br />
+
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">About Us</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Services</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Blog</span>
+          <br />
+          <img src="./right angle bracket.PNG" alt="" />
+          <span style="text-decoration: underline">Contact Us</span>
+        </div>
+        <div>
+          <h3>News Letter</h3>
+          <p>
+            Lorem Ipsum dolor sit amet, <br />
+            consectetur adipisicing elit.
+          </p>
+          <div class="email">
+            <input type="text" placeholder="Email" style="width: 130px" />
+            <img src="./paperplane icon.PNG" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- <br /><br /> -->
+      <div style="text-align: center; margin-top: 50px;" >
+        <p>
+          2023 @ All Rights Reserved And Design By
+          <b style="color: rgb(255, 145, 0)"> M.Ahmad</b>
+        </p>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

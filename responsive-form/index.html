@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+      }
+
+      .border {
+        border: 3px solid rgb(240, 175, 10);
+      }
+
+      .main {
+        width: 100%;
+        max-width: 440px;
+        padding: 20px;
+        background-color: white;
+      }
+
+      h1 {
+        text-align: center;
+        font-family: sans-serif;
+        word-wrap: break-word;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .icon button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .icon i {
+        margin-right: 10px;
+      }
+
+      input[type="email"],
+      input[type="password"],
+      input[type="text"],
+      .select-country {
+        height: 30px;
+        width: calc(100% - 40px);
+      }
+
+      .gender {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: baseline;
+      }
+      .gender label {
+        margin-right: 10px;
+      }
+
+      .country select {
+        width: calc(100% - 40px);
+        height: 35px;
+        margin-bottom: 10px;
+      }
+
+      .submit-btn {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+        font-size: large;
+        background-color: rgb(240, 175, 10);
+        border: none;
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .main {
+          padding: 10px;
+        }
+        .gender {
+          display: flex;
+          margin-bottom: 10px;
+          align-items: baseline;
+        }
+        .gender label {
+          margin-right: 10px;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        .select-country,
+        .gender label,
+        input[type="checkbox"] + label {
+          width: calc(100% - 20px);
+        }
+
+        .icon i {
+          display: none;
+        }
+
+        .icon button {
+          margin-right: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="main border">
+        <h1>Responsive Registration Form</h1>
+        <div class="icon">
+          <button><i class="fa fa-envelope"></i></button>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="icon">
+          <button><i class="fa fa-lock"></i></button>
+          <input type="password" placeholder="Password" />
+        </div>
+        <div class="icon">
+          <button><i class="fa fa-lock"></i></button>
+          <input type="password" placeholder="Re-type password" />
+        </div>
+        <div class="icon">
+          <button><i class="fa fa-user"></i></button>
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="gender">
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="notsay" />
+          <label for="notsay">Rather not say</label>
+        </div>
+        <div class="country">
+          <select>
+            <option disabled selected hidden value="">Select a country</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="india">India</option>
+            <option value="america">America</option>
+            <option value="canada">Canada</option>
+          </select>
+        </div>
+        <input type="checkbox" id="terms" />
+        <label for="terms"><b>I agree with terms and conditions</b></label>
+        <br />
+        <input type="checkbox" id="newsletter" />
+        <label for="newsletter"><b>I want to receive the newsletter</b></label>
+        <button class="submit-btn">Register</button>
+      </div>
+    </form>
+  </body>
+</html>

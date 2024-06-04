@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color schemes</title>
+    <style>
+      .size {
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="size"
+      style="background-color: black; color: rgb(124, 176, 178)"
+    >
+      <p style="text-align: center; align-items: center">checking...</p>
+    </div>
+     <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div>
+    <div class="size"></div> 
+  </body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .image-container {
+        width: 200px;
+        height: 200px;
+        background-image: url("./Isolated_white_t-shirt_front.jpg");
+        background-size: cover;
+        transition: background-image 0.3s ease-in-out;
+      }
+
+      .image-container:hover {
+        background-image: url("./back_black_t_shirt_on_a_transparent_background.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container"></div>
+  </body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .image-container1 {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .image-container1 img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .image-container1:hover img {
+        transform: scale(1.1); /* Optional: Add a zoom effect on hover */
+      }
+
+      .image-container {
+        width: 200px;
+        height: 200px;
+        background-image: url("./Isolated_white_t-shirt_front.jpg");
+        background-size: cover;
+        transition: background-image 0.3s ease-in-out;
+      }
+
+      .image-container:hover {
+        background-image: url("./back_black_t_shirt_on_a_transparent_background.jpg");
+      }
+    </style>
+  </head>
+  <body style="display: flex; justify-content: space-around">
+    <div>
+      <div class="image-container"></div>
+      <h1>Background image change on hover</h1>
+    </div>
+    <div>
+      <div
+        class="image-container1"
+        onmouseover="changeImage()"
+        onmouseout="restoreImage()"
+      >
+        <img
+          id="image"
+          src="./Isolated_white_t-shirt_front.jpg"
+          alt="Original Image"
+        />
+      </div>
+      <h1>Image change on hover</h1>
+
+      <script>
+        var originalImage = "./Isolated_white_t-shirt_front.jpg";
+        var hoverImage = "./back_black_t_shirt_on_a_transparent_background.jpg  ";
+
+        function changeImage() {
+          document.getElementById("image").src = hoverImage;
+        }
+
+        function restoreImage() {
+          document.getElementById("image").src = originalImage;
+        }
+      </script>
+    </div>
+  </body>
+</html>
